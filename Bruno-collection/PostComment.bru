@@ -1,0 +1,21 @@
+meta {
+  name: PostComment
+  type: graphql
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}
+  body: graphql
+  auth: none
+}
+
+body:graphql {
+  mutation postCommentOnLink {
+    postCommentOnLink(linkId: "1", body: "This is my first comment!") {
+      id
+      createdAt
+      body
+    }
+  }
+}

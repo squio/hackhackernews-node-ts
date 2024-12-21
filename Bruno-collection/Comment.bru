@@ -1,0 +1,25 @@
+meta {
+  name: Comment
+  type: graphql
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}
+  body: graphql
+  auth: none
+}
+
+body:graphql {
+  query comment {
+    comment(id: 1) {
+      id
+      body
+      link {
+        id
+        description
+        url
+      }
+    }
+  }
+}

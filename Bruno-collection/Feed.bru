@@ -1,0 +1,25 @@
+meta {
+  name: Feed
+  type: graphql
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}
+  body: graphql
+  auth: none
+}
+
+body:graphql {
+  query {
+    feed(filterNeedle: "repl") {
+      id
+      url
+      description
+      comments {
+        id
+        body
+      }
+    }
+  }
+}

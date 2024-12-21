@@ -1,0 +1,19 @@
+meta {
+  name: PostLink
+  type: graphql
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}
+  body: graphql
+  auth: none
+}
+
+body:graphql {
+  mutation {
+    postLink(url: "www.prisma.io", description: "Prisma replaces traditional ORMs") {
+      id
+    }
+  }
+}
